@@ -122,34 +122,11 @@ function Node({ top, left, label, color, isCenter }) {
       color: isCenter ? '#fff' : color,
       boxShadow: `0 0 30px ${color}40`,
       zIndex: 1,
-      animation: \`popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards\`,
+      animation: `popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards`,
     }}>
       {label}
     </div>
   );
 }
 
-function Node({ top, left, label, color, isCenter, delay }) {
-  return (
-    <div style={{
-      position: 'absolute',
-      top, left,
-      transform: 'translate(-50%, -50%)',
-      width: isCenter ? '110px' : '90px', 
-      height: isCenter ? '110px' : '90px',
-      borderRadius: '50%',
-      background: isCenter ? color : 'var(--bg-card)',
-      border: `3px solid ${color}`,
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      fontWeight: '900', fontSize: isCenter ? '18px' : '15px',
-      color: isCenter ? '#fff' : color,
-      boxShadow: `0 0 30px ${color}40`,
-      zIndex: 1,
-      animation: `popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards`,
-      animationDelay: delay,
-      opacity: 0,
-    }}>
-      {label}
-    </div>
-  );
-}
+
